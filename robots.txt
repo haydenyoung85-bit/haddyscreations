@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /guides/_template.html
+Sitemap: https://haddyscreations.com/sitemap.xml
