@@ -25,8 +25,10 @@ for d, _, fs in os.walk(ROOT):
         if not f.endswith('.html'): continue
         page = os.path.join(d, f); p = parse(page)
         for u in p.links:
-            if re.match(r'^(https?:|mailto:|tel:)', u): continue
+            if re.match(r'^(https?:|mailto:|tel:|sms:)', u): continue
             n += 1
+            if u.startswith('/'):
+                errs.append(f'{os.path.relpath(page,ROOT)}: root-relative link {u} (breaks on project site)'); continue
             if u.startswith('#') and (u.startswith('#affiliate-') or u == '#stripe-payment-link-TODO'): continue
             t = target(page, u)
             if not os.path.isfile(t): errs.append(f'{os.path.relpath(page,ROOT)}: missing {u}'); continue

@@ -1,21 +1,29 @@
-:root{--bg:#fffaf3;--ink:#264653;--accent:#e76f51;--soft:#f4a261;--card:#fff;--muted:#5c6b73}
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
-a{color:var(--accent)}img{max-width:100%}
-.wrap{max-width:960px;margin:0 auto;padding:0 1.2rem}
-header.site{background:#fff;border-bottom:3px solid var(--soft)}
-header.site .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.6rem;padding-top:.7rem;padding-bottom:.7rem}
-.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--ink);font-weight:800;font-size:1.25rem}.brand img{width:42px;height:42px}
-nav ul{list-style:none;display:flex;gap:1rem;margin:0;padding:0;flex-wrap:wrap}nav a{text-decoration:none;color:var(--ink);font-weight:600}nav a:hover{color:var(--accent)}
-.menu-btn{display:none;background:none;border:2px solid var(--ink);border-radius:8px;padding:.3rem .6rem;font-size:1rem;color:var(--ink)}
-main{padding:2rem 0 3rem}h1{line-height:1.2;font-size:clamp(1.8rem,5vw,2.6rem)}h2{margin-top:2.2rem}
-.hero{text-align:center;padding:2rem 0}.hero p{font-size:1.15rem;max-width:620px;margin:0 auto 1.5rem}
-.btn{display:inline-block;background:var(--accent);color:#fff;padding:.7rem 1.3rem;border-radius:999px;text-decoration:none;font-weight:700;margin:.3rem}.btn.alt{background:var(--ink)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.2rem}
-.card{background:var(--card);border-radius:16px;padding:1.3rem;box-shadow:0 2px 10px rgba(38,70,83,.08)}
-.placeholder{background:#fdf0e3;border:2px dashed var(--soft);border-radius:12px;padding:1rem;text-align:center;color:var(--muted);font-style:italic;margin:1rem 0}
-.note{background:#eef6f5;border-left:4px solid var(--ink);padding:.8rem 1rem;border-radius:6px}
-.tag{display:inline-block;background:#fdf0e3;color:var(--accent);font-size:.8rem;font-weight:700;padding:.1rem .6rem;border-radius:999px}
-.price{font-size:1.3rem;font-weight:800}
-article{max-width:720px}article li{margin:.3rem 0}.toc{background:#fff;border-radius:12px;padding:1rem 1.5rem}
-footer.site{background:var(--ink);color:#fff;padding:2rem 0;font-size:.92rem}footer.site a{color:#ffd6a5}footer.site ul{list-style:none;padding:0;display:flex;gap:1rem;flex-wrap:wrap}
-@media(max-width:640px){.menu-btn{display:block}nav{width:100%;display:none}nav.open{display:block}nav ul{flex-direction:column;gap:.5rem;padding:.5rem 0}}
+/* Shared style, matched to Hayden's homepage design (pink / rose / Georgia) */
+:root{--paper:#fffdfb;--pink:#f8e7e9;--rose:#9e4260;--ink:#39272d;--muted:#715f65;--line:#e8d8d8;--beige:#f3ece5;--bg:var(--paper);--accent:var(--rose);--soft:#be9ca6;--card:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+a{color:var(--rose);text-underline-offset:3px}a:focus-visible,button:focus-visible{outline:3px solid var(--rose);outline-offset:4px}img{max-width:100%}
+.wrap{width:min(1160px,calc(100% - 48px));margin:0 auto}
+.skip{position:absolute;top:-70px;left:12px;background:#fff;padding:10px;z-index:9}.skip:focus{top:12px}
+header.site{background:var(--paper);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;min-height:96px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}.brand img{width:44px;height:44px}
+.brand-text{font:italic 1.8rem Georgia,serif;letter-spacing:-.045em;line-height:1}.brand-text small{display:block;font:10px/1.2 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-style:normal;text-transform:uppercase;letter-spacing:.28em;margin-top:8px;color:var(--muted)}
+nav ul{list-style:none;display:flex;align-items:center;gap:28px;margin:0;padding:0;flex-wrap:wrap}nav a{text-decoration:none;color:var(--ink);font-size:.93rem}nav a:hover{color:var(--rose)}
+.nav-call{border-bottom:1px solid var(--rose);padding-bottom:3px;color:var(--rose)!important;font-weight:600}
+.menu-btn{display:none;background:none;border:1px solid var(--soft);border-radius:5px;padding:.4rem .7rem;font-size:.95rem;color:var(--ink)}
+main{padding:2.5rem 0 3.5rem}main.home{padding:0}
+main:not(.home) h1,main:not(.home) h2{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.03em;line-height:1.15}
+main:not(.home) h1{font-size:clamp(2.2rem,5vw,3.4rem)}main:not(.home) h2{font-size:clamp(1.6rem,3vw,2.1rem);margin-top:2.4rem}
+.hero{text-align:center;padding:2rem 0}.hero p{font-size:1.1rem;max-width:620px;margin:0 auto 1.5rem;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--rose);color:#fff;padding:12px 22px;border-radius:5px;border:1px solid var(--rose);text-decoration:none;font-weight:600;margin:.3rem;min-height:46px}.btn:hover{background:#7e304b}.btn.alt{background:transparent;color:var(--ink);border-color:var(--soft)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:24px}.card h2{margin-top:.6rem!important}
+.placeholder{background:var(--pink);border:2px dashed var(--soft);border-radius:8px;padding:1rem;text-align:center;color:var(--muted);font-style:italic;margin:1rem 0}
+.note{background:var(--beige);border-left:3px solid var(--rose);padding:.9rem 1.1rem;border-radius:5px}
+.tag{display:inline-block;background:var(--pink);color:var(--rose);font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;padding:.2rem .7rem;border-radius:100px}
+.price{font-size:1.3rem;font-weight:700}
+article{max-width:720px}article li{margin:.35rem 0}.toc{background:var(--beige);border-radius:8px;padding:1rem 1.5rem}
+footer.site{border-top:1px solid var(--line);background:var(--beige);padding:2rem 0 2.4rem;font-size:.86rem;color:var(--muted)}
+footer.site .brand-text{font-size:1.4rem}footer.site ul{list-style:none;padding:0;display:flex;gap:1.2rem;flex-wrap:wrap}footer.site details a{display:inline-block;margin:6px 8px 0 0}footer.site summary{cursor:pointer}
+@media(max-width:700px){.menu-btn{display:block}nav{width:100%;display:none}nav.open{display:block}nav ul{flex-direction:column;align-items:flex-start;gap:.6rem;padding:.4rem 0 1rem}.brand-text{font-size:1.5rem}header.site .wrap{min-height:80px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
