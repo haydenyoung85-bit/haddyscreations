@@ -23,3 +23,6 @@ The CNAME file was removed on purpose: a CNAME without working DNS breaks the gi
 2. Create a file named `CNAME` in the repo root containing just `haddyscreations.com`, commit and push (or set it in repo Settings → Pages → Custom domain).
 3. When the certificate is ready, tick "Enforce HTTPS" in Settings → Pages.
 4. Replace `https://haydenyoung85-bit.github.io/haddyscreations/` with `https://haddyscreations.com/` in `sitemap.xml`, `robots.txt` (also change the Disallow line to `/guides/_template.html`) and `404.html`.
+
+## Contact form
+`contact/index.html` uses FormSubmit (free, no backend) to email messages to Hayden.Young85@gmail.com. The **first** submission sends a one-time activation email to that address. Click the link in it, or no messages will arrive. After you move to haddyscreations.com, update the `_next` URL in the form to `https://haddyscreations.com/thanks/`.
