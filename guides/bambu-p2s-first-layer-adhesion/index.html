@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bambu P2S First Layer Not Sticking? Fix Bed Adhesion | Haddy's Creations</title>
+<meta name="description" content="Bambu Lab P2S first layer not sticking? Step-by-step fixes for bed adhesion: plate cleaning, plate type, leveling, slicer settings and Z offset.">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/main.js" defer></script>
+</head>
+<body>
+<!-- SHARED HEADER: if you change this, change it on every page -->
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="wrap">
+<a class="brand" href="../../"><img src="../../assets/logo.svg" alt=""><span class="brand-text">Haddy's Creations<small>Custom 3D prints</small></span></a>
+<button class="menu-btn" aria-expanded="false" aria-label="Menu">☰ Menu</button>
+<nav aria-label="Main navigation"><ul><li><a href="../../">Home</a></li><li><a href="../../guides/">Guides</a></li><li><a href="../../shop/">Shop</a></li><li><a href="../../about/">About</a></li><li><a class="nav-call" href="../../contact/">Contact</a></li></ul></nav>
+</div></header>
+<main id="main"><div class="wrap">
+<article>
+<p class="tag">Troubleshooting</p>
+<h1>Bambu P2S first layer not sticking? How to fix bed adhesion problems</h1>
+<p><em>By Hayden &middot; Last updated: [DATE]</em></p>
+<p class="note">Affiliate note: some links below are affiliate links. If you buy through them I may earn a small commission at no extra cost to you. As an Amazon Associate I earn from qualifying purchases. <a href="../../disclosure/">Full disclosure</a>.</p>
+<p>A bad first layer is the root of most failed prints: corners lifting, a model getting dragged around the plate, or a bird's nest of &ldquo;spaghetti&rdquo; where your print should be. The good news is that on a Bambu Lab P2S the fix is usually simple. This guide walks through the checks in the order I'd do them, easiest first, based on Bambu Lab's own troubleshooting guides.</p>
+<p><strong>Always check the official Bambu Lab Wiki for your printer</strong> &mdash; menu names and steps can change with firmware updates.</p>
+<div class="toc"><strong>In this guide</strong><ol><li><a href="#diagnose">Too high or too low? Read your first layer</a></li><li><a href="#quick-fixes">The five quick fixes (try these first)</a></li><li><a href="#calibration">Re-run calibration and bed leveling</a></li><li><a href="#slicer">Slicer tweaks that help</a></li><li><a href="#z-offset">Fine-tuning the first layer height</a></li><li><a href="#hardware">Still failing? Hardware checks</a></li><li><a href="#removal">Prints stuck too well?</a></li><li><a href="#checklist">Printable checklist</a></li><li><a href="#sources">Sources</a></li></ol></div>
+
+<h2 id="diagnose">1. Too high or too low? Read your first layer</h2>
+<p>Bambu's P2S first-layer guide splits problems into two types. Look closely at the first layer of a failed print:</p>
+<ul>
+<li><strong>Nozzle too far from the plate (first layer too high):</strong> the lines look round and separate with gaps between them, adhesion is weak, and lines may peel apart when you remove the print. This can lead to warping, parts shifting, or spaghetti.</li>
+<li><strong>Nozzle too close (first layer too low):</strong> the surface looks rough, wavy or over-squashed, the nozzle may scrape the plate, and the print can be very hard to remove. Too little filament may come out, which can build up at the nozzle.</li>
+</ul>
+<p>Bambu also points out that small imperfections in a small part of the first layer usually don't matter, as long as the layer sticks well overall.</p>
+<div class="placeholder">[PHOTO: a good first layer next to one that's too high and one that's too low]</div>
+
+<h2 id="quick-fixes">2. The five quick fixes (try these first)</h2>
+<ol>
+<li><strong>Wash the build plate properly.</strong> Bambu calls a dirty plate the most common cause of first-layer spaghetti. Their cleaning guide for the Textured PEI Plate: wet it, scrub with dish soap and a sponge or plastic brush, rinse with warm water, and dry it with a paper towel. Use a detergent without oils or moisturisers, <strong>never use acetone</strong> on it, and hold the plate by its edges afterwards so you don't leave fingerprints. <a href="#affiliate-dish-brush">The brush I use</a><!-- TODO: replace #affiliate-dish-brush with your real affiliate link --></li>
+<li><strong>Select the right plate type in Bambu Studio.</strong> It must match the plate on the printer. This matters more than you'd think: Bambu explains that on the Textured PEI Plate the printer lowers the nozzle slightly (0.04&nbsp;mm) after leveling to compensate for the texture. If you're using the textured plate but sliced for a different plate, the nozzle will be too high, and the bed temperature may be too low as well.</li>
+<li><strong>Keep Auto Bed Leveling turned on</strong> in the print-sending window. Bambu strongly recommends leaving it on for the best chance of success.</li>
+<li><strong>Check under the plate.</strong> A blob of filament or debris between the plate and the heatbed stops it sitting flat. Wipe both surfaces.</li>
+<li><strong>Dry your filament.</strong> Damp filament turns to steam in the nozzle and extrudes unevenly, which hurts adhesion. PETG is especially prone to this. See my <a href="../bambu-p2s-beginner-filaments/">beginner filament guide</a> for storage and drying tips.</li>
+</ol>
+<p>In Bambu's words, washing the plate &ldquo;solves most issues related to adhesion,&rdquo; as long as you're using the right settings and plate type.</p>
+
+<h2 id="calibration">3. Re-run calibration and bed leveling</h2>
+<p>If the quick fixes didn't work, re-run the printer's calibration. Bambu's P2S guide recommends running <strong>Auto Bed Leveling</strong> and <strong>High-temperature Bed Leveling</strong> from the printer's calibration menu (Print Calibration).</p>
+<ul>
+<li>Bambu says you <strong>must</strong> re-run leveling if the printer has been moved, stored for a long time, or the heatbed has been removed or replaced.</li>
+<li><strong>Clean the nozzle tip before leveling.</strong> Bambu warns that leftover filament on the nozzle can throw off the leveling measurement. It also recommends checking that the nozzle wiper is clean, in place and not bent.</li>
+<li>Calibration data is stored on the printer and applied automatically, so you don't need to do anything else afterwards.</li>
+</ul>
+<div class="placeholder">[PHOTO: the P2S calibration screen]</div>
+
+<h2 id="slicer">4. Slicer tweaks that help</h2>
+<ul>
+<li><strong>Slow the first layer down.</strong> Bambu recommends an initial layer speed of 30&nbsp;mm/s or less (and initial layer infill of 60&nbsp;mm/s or less) if parts aren't sticking.</li>
+<li><strong>Add a brim to small or tall parts.</strong> Adhesion is roughly proportional to the contact area. Bambu suggests a brim (they recommend 5&ndash;8&nbsp;mm wide, wider for smaller contact areas) to stop small-footprint parts being knocked off.</li>
+<li><strong>Use supports for tall, thin models</strong> so the nozzle doesn't knock them over at speed.</li>
+<li><strong>Check the bed temperature</strong> if you've edited a filament profile. Bambu's textured PEI troubleshooting guide says a slightly higher bed temperature increases adhesion, but warns that too much heat with PLA or PETG can cause clogs and &ldquo;elephant's foot.&rdquo; Stay within the ranges in Bambu's filament guide.</li>
+<li><strong>Thicker first layer as a last slicer tweak.</strong> If problems continue, Bambu suggests trying a 0.5&nbsp;mm first-layer line width and 0.25&nbsp;mm first-layer height.</li>
+<li><strong>Printing PLA in a warm room?</strong> The P2S is enclosed. Bambu recommends opening the door and/or removing the top glass cover when printing PLA with the bed above 45&nbsp;&deg;C, to stop heat building up and softening the filament before it reaches the nozzle.</li>
+</ul>
+
+<h2 id="z-offset">5. Fine-tuning the first layer height</h2>
+<p>If the first layer is still consistently too high or too low across the whole plate, Bambu's P2S guide describes a <strong>First Layer Quality Calibration</strong> option in the calibration menu where you can adjust the Z offset:</p>
+<ul>
+<li><strong>First layer too high</strong> (gappy lines) &rarr; decrease the offset, e.g. from 0 to &minus;0.01.</li>
+<li><strong>First layer too low</strong> (squashed, scraping) &rarr; increase the offset, e.g. from 0 to 0.01.</li>
+<li>Change it in small steps and run a test print each time. Bambu's guide mentions going up to a maximum of 0.05&nbsp;mm.</li>
+</ul>
+<p>Only do this after cleaning, choosing the right plate and re-running leveling. Otherwise you're compensating for a different problem.</p>
+
+<h2 id="hardware">6. Still failing? Hardware checks</h2>
+<ul>
+<li><strong>Same spot fails every time?</strong> Bambu says repeated sparse lines in the same area are usually contamination (like an oil stain) on the plate. Clean it thoroughly (Bambu mentions anhydrous alcohol or a dedicated cleaner as options), re-seat the plate and re-run leveling.</li>
+<li><strong>Whole first layer too low?</strong> Check the nozzle is properly clipped in and doesn't wiggle. Bambu's guide covers re-tightening the hotend if it's loose.</li>
+<li><strong>Plate worn out?</strong> If one side of a textured plate just won't stick any more, Bambu suggests trying the other side. If that works, the plate is fine to keep using. <a href="#affiliate-textured-pei-plate">Replacement Textured PEI plate</a><!-- TODO: replace #affiliate-textured-pei-plate with your real affiliate link; make sure it's the 2nd-generation (P2S-recognised) version --></li>
+<li><strong>Manual bed leveling is the last resort.</strong> Bambu has a dedicated P2S &amp; X2D manual bed leveling guide using a special G-code file and a sheet of paper. Only try it if everything above has failed, and follow the official steps exactly.</li>
+<li><strong>Still stuck?</strong> Open a ticket with Bambu Lab support. They'll usually ask for photos and printer logs.</li>
+</ul>
+
+<h2 id="removal">7. Prints stuck too well?</h2>
+<p>The opposite problem! Bambu recommends letting the plate cool, ideally to 35&nbsp;&deg;C or lower, then removing it and gently flexing it so the print pops off. If a print is welded on and the first layer looked very squashed, your first layer is probably too low (see section 5).</p>
+<p><a href="#affiliate-plastic-scraper">Plastic scraper for stubborn prints</a><!-- TODO: replace #affiliate-plastic-scraper with your real affiliate link --></p>
+
+<h2 id="checklist">8. Printable checklist</h2>
+<ol>
+<li>Plate washed with warm water and dish soap, dried, no fingerprints</li>
+<li>Correct plate type selected in Bambu Studio</li>
+<li>Nothing stuck under the plate</li>
+<li>Auto Bed Leveling turned on when sending the print</li>
+<li>Filament dry (especially PETG)</li>
+<li>Nozzle tip clean; wiper clean and straight</li>
+<li>Calibration re-run after moving the printer</li>
+<li>First layer slowed down and a brim added for small or tall parts</li>
+<li>Z offset fine-tuned in tiny steps (only if still needed)</li>
+</ol>
+<p>Got a first-layer problem this didn't fix? <a href="../../contact/">Get in touch</a> and I'll try to help. New to the P2S? Start with my <a href="../bambu-p2s-first-week/">first-week guide</a>.</p>
+
+<h2 id="sources">Sources</h2>
+<p>This guide is based on Bambu Lab's official documentation (checked [DATE]). Check these pages for the latest steps for your firmware:</p>
+<ul>
+<li><a href="https://wiki.bambulab.com/en/p2s/troubleshooting/first-layer-printing-optimization-guide" target="_blank" rel="noopener noreferrer">Bambu Lab Wiki: P2S first-layer printing optimization guide</a></li>
+<li><a href="https://wiki.bambulab.com/en/knowledge-sharing/first-layer-not-sticking" target="_blank" rel="noopener noreferrer">Bambu Lab Wiki: First layer not sticking &mdash; causes and solutions</a></li>
+<li><a href="https://wiki.bambulab.com/en/filament-acc/filament/print-quality/spaghetti" target="_blank" rel="noopener noreferrer">Bambu Lab Wiki: Troubleshooting spaghetti in 3D printing</a></li>
+<li><a href="https://wiki.bambulab.com/en/filament-acc/acc/pei-plate-clean-guide" target="_blank" rel="noopener noreferrer">Bambu Lab Wiki: Textured PEI Plate cleaning guide</a></li>
+<li><a href="https://wiki.bambulab.com/en/general/textured-PEI-plate-not-working-as-expected" target="_blank" rel="noopener noreferrer">Bambu Lab Wiki: Textured PEI Plate troubleshooting guide</a></li>
+<li><a href="https://wiki.bambulab.com/en/filament-acc/acc/plates" target="_blank" rel="noopener noreferrer">Bambu Lab Wiki: Introduction to Bambu Lab build plates</a></li>
+<li><a href="https://wiki.bambulab.com/en/general/filament-guide-material-table" target="_blank" rel="noopener noreferrer">Bambu Lab Wiki: Filament guide (build plate and bed temperature table)</a></li>
+<li><a href="https://wiki.bambulab.com/en/p2s/maintenance/manual-bed-tramming" target="_blank" rel="noopener noreferrer">Bambu Lab Wiki: P2S &amp; X2D manual bed leveling</a></li>
+</ul>
+</article>
+</div></main>
+<!-- SHARED FOOTER -->
+<footer class="site"><div class="wrap">
+<div><a class="brand" href="../../"><span class="brand-text">Haddy's Creations</span></a><p>Custom 3D prints, made personal. <a href="../../contact/">Get in touch</a></p></div>
+<ul><li><a href="../../guides/">Guides</a></li><li><a href="../../shop/">Shop</a></li><li><a href="../../about/">About</a></li><li><a href="../../privacy/">Privacy</a></li><li><a href="../../disclosure/">Affiliate disclosure</a></li></ul>
+<p>Some links on this site are affiliate links. As an Amazon Associate I earn from qualifying purchases. <a href="../../disclosure/">Learn more</a>.</p>
+<p>&copy; <span id="year">2026</span> Haddy's Creations. Not affiliated with or endorsed by any printer manufacturer.</p>
+<details><summary>Photo credits</summary><p>Stock inspiration photographs from Unsplash.</p><a href="https://unsplash.com/photos/a-purple-vase-sitting-on-top-of-a-gray-floor-C165O0AD8Ec" target="_blank" rel="noopener noreferrer">Vase · David Clode</a><a href="https://unsplash.com/photos/a-red-rose-sits-in-a-black-origami-vase-3gQTpHwu73E" target="_blank" rel="noopener noreferrer">Rose · Snapmaker</a><a href="https://unsplash.com/photos/a-black-and-silver-vase-sitting-on-top-of-a-tiled-floor-Jnf_DO5H6fE" target="_blank" rel="noopener noreferrer">Cat · Snapmaker</a></details>
+</div></footer>
+</body>
+</html>
