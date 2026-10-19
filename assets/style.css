@@ -30,3 +30,4 @@ footer.site .brand-text{font-size:1.4rem}footer.site ul{list-style:none;padding:
 .contact-form{max-width:560px;display:grid;gap:1rem;margin-top:1.5rem}.contact-form label{display:grid;gap:.35rem;font-weight:600}
 .contact-form input,.contact-form select,.contact-form textarea{font:inherit;padding:.7rem .8rem;border:1px solid var(--soft);border-radius:5px;background:#fff;color:var(--ink)}
 .contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{outline:2px solid var(--rose);border-color:var(--rose)}.contact-form .btn{justify-self:start;margin:0;cursor:pointer;font:inherit;font-weight:600}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:1rem 0 1.5rem}.gallery figure{margin:0}.gallery img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:8px;border:1px solid var(--line);background:#fff}.gallery figcaption{font-size:.9rem;color:var(--muted);margin-top:.4rem}
